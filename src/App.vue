@@ -4,7 +4,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <template>
   <!-- 首页 -->
-  <div class="bg-bg_color w-full h-full">
+  <div class="bg-bg_color w-full h-full layout">
     <div>
       <a href="https://vitejs.dev" target="_blank">
         <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -17,7 +17,12 @@ import HelloWorld from "./components/HelloWorld.vue";
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.layout {
+  div {
+    background-color: greenyellow;
+  }
+}
 .logo {
   height: 6em;
   padding: 1.5em;

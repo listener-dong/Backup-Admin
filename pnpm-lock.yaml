@@ -20,6 +20,7 @@ specifiers:
   prettier: ^2.8.4
   pretty-quick: ^3.1.3
   rimraf: ^4.1.2
+  sass: ^1.58.3
   stylelint: ^15.2.0
   stylelint-config-html: ^1.1.0
   stylelint-config-prettier: ^9.0.5
@@ -57,6 +58,7 @@ devDependencies:
   prettier: registry.npmmirror.com/prettier/2.8.4
   pretty-quick: registry.npmmirror.com/pretty-quick/3.1.3_prettier@2.8.4
   rimraf: registry.npmmirror.com/rimraf/4.1.2
+  sass: registry.npmmirror.com/sass/1.58.3
   stylelint: registry.npmmirror.com/stylelint/15.2.0
   stylelint-config-html: registry.npmmirror.com/stylelint-config-html/1.1.0_x2qzl5lwlwnkkekx7bj2y4o6y4
   stylelint-config-prettier: registry.npmmirror.com/stylelint-config-prettier/9.0.5_stylelint@15.2.0
@@ -65,7 +67,7 @@ devDependencies:
   stylelint-order: registry.npmmirror.com/stylelint-order/6.0.2_stylelint@15.2.0
   tailwindcss: registry.npmmirror.com/tailwindcss/3.2.7_postcss@8.4.21
   typescript: registry.npmmirror.com/typescript/4.9.5
-  vite: registry.npmmirror.com/vite/4.1.4
+  vite: registry.npmmirror.com/vite/4.1.4_sass@1.58.3
   vite-plugin-eslint: registry.npmmirror.com/vite-plugin-eslint/1.8.1_eslint@8.35.0+vite@4.1.4
   vue-eslint-parser: registry.npmmirror.com/vue-eslint-parser/9.1.0_eslint@8.35.0
   vue-tsc: registry.npmmirror.com/vue-tsc/1.2.0_typescript@4.9.5
@@ -1384,7 +1386,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: registry.npmmirror.com/vite/4.1.4
+      vite: registry.npmmirror.com/vite/4.1.4_sass@1.58.3
       vue: registry.npmmirror.com/vue/3.2.47
     dev: true
 
@@ -3996,6 +3998,17 @@ packages:
     engines: { node: ">= 4" }
     dev: true
 
+  registry.npmmirror.com/immutable/4.2.4:
+    resolution:
+      {
+        integrity: sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w==,
+        registry: https://registry.npm.taobao.org/,
+        tarball: https://registry.npmmirror.com/immutable/-/immutable-4.2.4.tgz
+      }
+    name: immutable
+    version: 4.2.4
+    dev: true
+
   registry.npmmirror.com/import-fresh/3.3.0:
     resolution:
       {
@@ -6124,6 +6137,23 @@ packages:
     version: 5.2.1
     dev: true
 
+  registry.npmmirror.com/sass/1.58.3:
+    resolution:
+      {
+        integrity: sha512-Q7RaEtYf6BflYrQ+buPudKR26/lH+10EmO9bBqbmPh/KeLqv8bjpTNqxe71ocONqXq+jYiCbpPUmQMS+JJPk4A==,
+        registry: https://registry.npm.taobao.org/,
+        tarball: https://registry.npmmirror.com/sass/-/sass-1.58.3.tgz
+      }
+    name: sass
+    version: 1.58.3
+    engines: { node: ">=12.0.0" }
+    hasBin: true
+    dependencies:
+      chokidar: registry.npmmirror.com/chokidar/3.5.3
+      immutable: registry.npmmirror.com/immutable/4.2.4
+      source-map-js: registry.npmmirror.com/source-map-js/1.0.2
+    dev: true
+
   registry.npmmirror.com/semver/5.7.1:
     resolution:
       {
@@ -7120,16 +7150,17 @@ packages:
       "@types/eslint": registry.npmmirror.com/@types/eslint/8.21.1
       eslint: registry.npmmirror.com/eslint/8.35.0
       rollup: registry.npmmirror.com/rollup/2.79.1
-      vite: registry.npmmirror.com/vite/4.1.4
+      vite: registry.npmmirror.com/vite/4.1.4_sass@1.58.3
     dev: true
 
-  registry.npmmirror.com/vite/4.1.4:
+  registry.npmmirror.com/vite/4.1.4_sass@1.58.3:
     resolution:
       {
         integrity: sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg==,
         registry: https://registry.npm.taobao.org/,
         tarball: https://registry.npmmirror.com/vite/-/vite-4.1.4.tgz
       }
+    id: registry.npmmirror.com/vite/4.1.4
     name: vite
     version: 4.1.4
     engines: { node: ^14.18.0 || >=16.0.0 }
@@ -7159,6 +7190,7 @@ packages:
       postcss: registry.npmmirror.com/postcss/8.4.21
       resolve: registry.npmmirror.com/resolve/1.22.1
       rollup: registry.npmmirror.com/rollup/3.17.3
+      sass: registry.npmmirror.com/sass/1.58.3
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true

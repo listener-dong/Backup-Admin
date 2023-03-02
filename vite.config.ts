@@ -1,6 +1,17 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
+/*
+  // tsconfig.JSON.stringify
+  配置 defineOptions 
+  {
+    "compilerOptions":{
+      "types":["unplugin-vue-define-options/macros-global"]
+    }
+  }
+   "unplugin-vue-define-options/macros-global"
+*/
+import DefineOptions from "unplugin-vue-define-options/vite";
 
 /** 路径查找 */
 const pathResolve = (dir: string): string => {
@@ -18,7 +29,7 @@ export default defineConfig({
   resolve: {
     alias
   },
-  plugins: [vue()],
+  plugins: [vue(), DefineOptions()],
   build: {
     sourcemap: false,
     // 消除打包大小超过500kb警告

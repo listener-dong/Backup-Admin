@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
+// import Layout from "@/layout/index.vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 </script>
 
 <template>
@@ -14,7 +18,37 @@ import HelloWorld from "./components/HelloWorld.vue";
       </a>
     </div>
     <HelloWorld msg="Vite + Vue3" />
-    <el-button type="primary" plain>按钮</el-button>
+    <el-button
+      type="primary"
+      plain
+      @click="
+        () => {
+          router.push('login');
+        }
+      "
+      >login</el-button
+    >
+    <el-button
+      type="primary"
+      plain
+      @click="
+        () => {
+          router.push('about');
+        }
+      "
+      >about</el-button
+    >
+    <el-button
+      type="primary"
+      plain
+      @click="
+        () => {
+          router.push('welcome');
+        }
+      "
+      >welcome</el-button
+    >
+    <div><router-view /></div>
   </div>
 </template>
 

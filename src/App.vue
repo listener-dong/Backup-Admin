@@ -2,13 +2,19 @@
 import HelloWorld from "./components/HelloWorld.vue";
 // import Layout from "@/layout/index.vue";
 import { useRouter } from "vue-router";
+import { useUserStoreHook } from "@/store/modules/user";
+import { computed } from "vue";
+
+const username = computed(() => useUserStoreHook().username);
 
 const router = useRouter();
+useUserStoreHook().SET_USERNAME("HelloWorld");
 </script>
 
 <template>
   <!-- 首页 -->
   <div class="bg-bg_color w-full h-full layout">
+    <h2 class="text-white">{{ username }}</h2>
     <div>
       <a href="https://vitejs.dev" target="_blank">
         <img src="/vite.svg" class="logo" alt="Vite logo" />

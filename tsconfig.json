@@ -17,7 +17,10 @@
       "@/*": ["src/*"],
       "@build/*": ["build/*"]
     },
-    "types": ["unplugin-vue-define-options/macros-global"]
+    "types": [
+      "unplugin-vue-define-options/macros-global",
+      "element-plus/global"
+    ]
   },
   "include": [
     "mock/*.ts",

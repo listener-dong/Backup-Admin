@@ -17,6 +17,8 @@ specifiers:
   eslint-plugin-vue: ^9.9.0
   husky: ^8.0.3
   lint-staged: ^13.1.2
+  pinia: ^2.0.32
+  pinia-plugin-persistedstate: ^3.1.0
   postcss: ^8.4.21
   postcss-html: ^1.5.0
   postcss-import: ^15.1.0
@@ -42,6 +44,8 @@ specifiers:
 
 dependencies:
   element-plus: registry.npmmirror.com/element-plus/2.2.32_vue@3.2.47
+  pinia: registry.npmmirror.com/pinia/2.0.32_hmuptsblhheur2tugfgucj7gc4
+  pinia-plugin-persistedstate: registry.npmmirror.com/pinia-plugin-persistedstate/3.1.0_pinia@2.0.32
   vue: registry.npmmirror.com/vue/3.2.47
   vue-router: registry.npmmirror.com/vue-router/4.1.6_vue@3.2.47
 
@@ -6154,6 +6158,48 @@ packages:
     engines: { node: ">=0.10.0" }
     dev: true
 
+  registry.npmmirror.com/pinia-plugin-persistedstate/3.1.0_pinia@2.0.32:
+    resolution:
+      {
+        integrity: sha512-8UN+vYMEPBdgNLwceY08mi5olI0wkYaEb8b6hD6xW7SnBRuPydWHlEhZvUWgNb/ibuf4PvufpvtS+dmhYjJQOw==,
+        registry: https://registry.npm.taobao.org/,
+        tarball: https://registry.npmmirror.com/pinia-plugin-persistedstate/-/pinia-plugin-persistedstate-3.1.0.tgz
+      }
+    id: registry.npmmirror.com/pinia-plugin-persistedstate/3.1.0
+    name: pinia-plugin-persistedstate
+    version: 3.1.0
+    peerDependencies:
+      pinia: ^2.0.0
+    dependencies:
+      pinia: registry.npmmirror.com/pinia/2.0.32_hmuptsblhheur2tugfgucj7gc4
+    dev: false
+
+  registry.npmmirror.com/pinia/2.0.32_hmuptsblhheur2tugfgucj7gc4:
+    resolution:
+      {
+        integrity: sha512-8Tw4OrpCSJ028UUyp0gYPP/wyjigLoEceuO/x1G+FlHVf73337e5vLm4uDmrRIoBG1hvaed/eSHnrCFjOc4nkA==,
+        registry: https://registry.npm.taobao.org/,
+        tarball: https://registry.npmmirror.com/pinia/-/pinia-2.0.32.tgz
+      }
+    id: registry.npmmirror.com/pinia/2.0.32
+    name: pinia
+    version: 2.0.32
+    peerDependencies:
+      "@vue/composition-api": ^1.4.0
+      typescript: ">=4.4.4"
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      "@vue/composition-api":
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      "@vue/devtools-api": registry.npmmirror.com/@vue/devtools-api/6.5.0
+      typescript: registry.npmmirror.com/typescript/4.9.5
+      vue: registry.npmmirror.com/vue/3.2.47
+      vue-demi: registry.npmmirror.com/vue-demi/0.13.11_vue@3.2.47
+    dev: false
+
   registry.npmmirror.com/postcss-calc/8.2.4_postcss@8.4.21:
     resolution:
       {
@@ -8269,7 +8315,6 @@ packages:
     version: 4.9.5
     engines: { node: ">=4.2.0" }
     hasBin: true
-    dev: true
 
   registry.npmmirror.com/universalify/2.0.0:
     resolution:

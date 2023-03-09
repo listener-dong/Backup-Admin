@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
+import eslintPlugin from "vite-plugin-eslint";
 /*
   // tsconfig.JSON.stringify
   配置 defineOptions 
@@ -29,7 +30,12 @@ export default defineConfig({
   resolve: {
     alias
   },
-  plugins: [vue(), DefineOptions()],
+  plugins: [
+    vue(),
+    DefineOptions(),
+    // * EsLint 报错信息显示在浏览器界面上
+    eslintPlugin()
+  ],
   build: {
     sourcemap: false,
     // 消除打包大小超过500kb警告

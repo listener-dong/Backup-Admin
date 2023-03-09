@@ -32,8 +32,9 @@ useUserStoreHook().SET_USERNAME("HelloWorld");
           router.push('login');
         }
       "
-      >login</el-button
     >
+      login
+    </el-button>
     <el-button
       type="primary"
       plain
@@ -42,8 +43,9 @@ useUserStoreHook().SET_USERNAME("HelloWorld");
           router.push('about');
         }
       "
-      >about</el-button
     >
+      about
+    </el-button>
     <el-button
       type="primary"
       plain
@@ -52,8 +54,9 @@ useUserStoreHook().SET_USERNAME("HelloWorld");
           router.push('welcome');
         }
       "
-      >welcome</el-button
     >
+      welcome
+    </el-button>
     <div><router-view /></div>
   </div>
 </template>

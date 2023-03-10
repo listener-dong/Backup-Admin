@@ -20,7 +20,9 @@
     "types": [
       "unplugin-vue-define-options/macros-global",
       "element-plus/global"
-    ]
+    ],
+    "typeRoots": ["./node_modules/@types/", "./types"]
+    // "suppressImplicitAnyIndexErrors": true
   },
   "include": [
     "mock/*.ts",
@@ -28,7 +30,7 @@
     "src/**/*.js",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "types/*.d.ts",
+    "types/**/*.d.ts",
     "vite.config.ts"
   ],
   "exclude": ["node_modules", "dist", "**/*.js"],

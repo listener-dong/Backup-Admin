@@ -12,7 +12,7 @@ import "element-plus/dist/index.css";
 const app = createApp(App);
 setupStore(app);
 
-await app.use(router);
+app.use(router);
 router.isReady();
 app.use(ElementPlus);
 

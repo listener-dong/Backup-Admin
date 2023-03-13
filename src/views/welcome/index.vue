@@ -1,10 +1,8 @@
-<!-- JavaScript -->
-<script setup lang="ts"></script>
-
-<!-- HTMl -->
-<template>
-  <div>欢迎页</div>
-</template>
-
-<!-- CSS -->
-<style scoped lang="scss"></style>
+<script lang="tsx">
+import { defineComponent } from "vue";
+export default defineComponent({
+  setup() {
+    return () => <div>Hello,World!!!!!</div>;
+  }
+});
+</script>

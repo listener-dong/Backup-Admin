@@ -13,6 +13,10 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 */
 import DefineOptions from "unplugin-vue-define-options/vite";
 import { vitesStartInfo, viteBuildInfo } from "./info";
+// 自动注册全局组件
+import Components from "unplugin-vue-components/vite";
+// element-plus 组件 按需引入
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 export const getPluginsList = (
   _command: string,
@@ -21,6 +25,18 @@ export const getPluginsList = (
 ) => {
   return [
     vue(),
+    Components({
+      // allow auto load markdown components under `./src/components/`
+      extensions: ["vue", "md"],
+      // allow auto import and register components used in markdown
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      resolvers: [
+        ElementPlusResolver({
+          importStyle: "sass"
+        })
+      ],
+      dts: "types/global-components.d.ts"
+    }),
     DefineOptions(),
     // * EsLint 报错信息显示在浏览器界面上
     eslintPlugin(),

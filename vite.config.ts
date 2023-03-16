@@ -54,6 +54,13 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
           assetFileNames: "static/[ext]/[name]-[hash].[ext]"
         }
       }
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "element-plus/dist/index.css" as *;`
+        }
+      }
     }
   };
 };

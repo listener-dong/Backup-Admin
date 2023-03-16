@@ -1,19 +1,21 @@
 <script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
 // import Layout from "@/layout/index.vue";
 import { useRouter } from "vue-router";
 import { useUserStoreHook } from "@/store/modules/user";
-import { computed } from "vue";
+import { computed, ref } from "vue";
 
 const username = computed(() => useUserStoreHook().username);
 
 const router = useRouter();
 useUserStoreHook().SET_USERNAME("HelloWorld");
+
+const input = ref("");
 </script>
 
 <template>
   <!-- 首页 -->
-  <div class="bg-bg_color w-full h-full layout">
+  <div class="w-full h-full layout">
     <h2 class="text-white">{{ username }}</h2>
     <div>
       <a href="https://vitejs.dev" target="_blank">
@@ -24,6 +26,8 @@ useUserStoreHook().SET_USERNAME("HelloWorld");
       </a>
     </div>
     <HelloWorld msg="Vite + Vue3" />
+    <el-input v-model="input" placeholder="请输入内容" />
+    <el-card>Hello~~!</el-card>
     <el-button
       type="primary"
       plain
@@ -62,11 +66,11 @@ useUserStoreHook().SET_USERNAME("HelloWorld");
 </template>
 
 <style lang="scss" scoped>
-.layout {
-  div {
-    background-color: greenyellow;
-  }
-}
+// .layout {
+// div {
+//   background-color: greenyellow;
+// }
+// }
 .logo {
   height: 6em;
   padding: 1.5em;

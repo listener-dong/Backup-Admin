@@ -26,7 +26,9 @@ export const getPluginsList = (
     eslintPlugin(),
     // jsx、tsx语法支持
     vueJsx(),
+    // 运行终端提示
     vitesStartInfo(),
+    // 打包终端提示
     viteBuildInfo()
   ];
 };

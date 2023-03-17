@@ -16,7 +16,9 @@ const input = ref("");
 <template>
   <!-- 首页 -->
   <div class="w-full h-full layout">
-    <h2 class="text-white">{{ username }}</h2>
+    <div class="text-red-800 font-bold" style="font-size: 50px">
+      {{ username }}
+    </div>
     <div>
       <a href="https://vitejs.dev" target="_blank">
         <img src="/vite.svg" class="logo" alt="Vite logo" />

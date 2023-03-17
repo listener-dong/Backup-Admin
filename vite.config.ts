@@ -58,7 +58,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "element-plus/dist/index.css" as *;`
+          additionalData: `@use "@/style/index.scss" as *;`
         }
       }
     }

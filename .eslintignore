@@ -9,3 +9,4 @@ commitlint.config.cjs
 postcss.config.cjs
 tailwind.config.cjs
 stylelint.config.cjs
+types/global-components.d.ts

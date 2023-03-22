@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   "@commitlint/cli": ^17.4.4
   "@commitlint/config-conventional": ^17.4.4
+  "@element-plus/icons-vue": ^2.1.0
   "@iconify/vue": ^4.1.0
   "@pureadmin/utils": ^1.8.5
   "@types/lodash-es": ^4.17.6
@@ -63,6 +64,7 @@ dependencies:
 devDependencies:
   "@commitlint/cli": registry.npmmirror.com/@commitlint/cli/17.4.4
   "@commitlint/config-conventional": registry.npmmirror.com/@commitlint/config-conventional/17.4.4
+  "@element-plus/icons-vue": registry.npmmirror.com/@element-plus/icons-vue/2.1.0_vue@3.2.47
   "@iconify/vue": registry.npmmirror.com/@iconify/vue/4.1.0_vue@3.2.47
   "@pureadmin/utils": registry.npmmirror.com/@pureadmin/utils/1.8.5_vue@3.2.47
   "@types/lodash-es": registry.npmmirror.com/@types/lodash-es/4.17.7
@@ -1046,7 +1048,6 @@ packages:
         optional: true
     dependencies:
       vue: registry.npmmirror.com/vue/3.2.47
-    dev: false
 
   registry.npmmirror.com/@esbuild/android-arm/0.16.17:
     resolution:

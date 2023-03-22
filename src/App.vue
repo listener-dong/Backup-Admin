@@ -1,70 +1,10 @@
 <script setup lang="ts">
 // import HelloWorld from "./components/HelloWorld.vue";
 // import Layout from "@/layout/index.vue";
-import { useRouter } from "vue-router";
-import { useUserStoreHook } from "@/store/modules/user";
-import { computed, ref } from "vue";
-
-const username = computed(() => useUserStoreHook().username);
-
-const router = useRouter();
-useUserStoreHook().SET_USERNAME("HelloWorld");
-
-const input = ref("");
 </script>
 
 <template>
-  <!-- 首页 -->
-  <div class="w-full h-full layout">
-    <div class="text-red-800 font-bold" style="font-size: 50px">
-      {{ username }}
-    </div>
-    <div>
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo" alt="Vite logo" />
-      </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-      </a>
-    </div>
-    <HelloWorld msg="Vite + Vue3" />
-    <el-input v-model="input" placeholder="请输入内容" />
-    <el-card>Hello~~!</el-card>
-    <el-button
-      type="primary"
-      plain
-      @click="
-        () => {
-          router.push('login');
-        }
-      "
-    >
-      login
-    </el-button>
-    <el-button
-      type="primary"
-      plain
-      @click="
-        () => {
-          router.push('about');
-        }
-      "
-    >
-      about
-    </el-button>
-    <el-button
-      type="primary"
-      plain
-      @click="
-        () => {
-          router.push('welcome');
-        }
-      "
-    >
-      welcome
-    </el-button>
-    <div><router-view /></div>
-  </div>
+  <router-view />
 </template>
 
 <style lang="scss" scoped>

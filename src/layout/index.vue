@@ -3,8 +3,11 @@
 
 <!-- HTMl -->
 <template>
+  <!-- 🔥 这里是异步加载 LayoutComponents -->
+  <suspense>
+    <div><router-view /></div>
+  </suspense>
   <h1>layout</h1>
-  <div><router-view /></div>
 </template>
 
 <!-- CSS -->

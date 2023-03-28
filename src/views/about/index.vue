@@ -1,10 +1,18 @@
-<!-- JavaScript -->
-<script setup lang="ts"></script>
+<script lang="tsx">
+import { defineComponent } from "vue";
+import { useRouter } from "vue-router";
 
-<!-- HTMl -->
-<template>
-  <div>关于</div>
-</template>
-
-<!-- CSS -->
-<style scoped lang="scss"></style>
+export default defineComponent({
+  setup() {
+    const router = useRouter();
+    function loginOut() {
+      router.push("/login");
+    }
+    return () => (
+      <el-button type="primary" onClick={loginOut}>
+        退出登陆
+      </el-button>
+    );
+  }
+});
+</script>

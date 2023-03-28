@@ -4,6 +4,7 @@ import { reactive, ref } from "vue";
 import type { ElForm } from "element-plus";
 import { Login } from "@/api/interface";
 import { User, Lock, CircleClose, UserFilled } from "@element-plus/icons-vue";
+import { useRouter } from "vue-router";
 
 type FormInstance = InstanceType<typeof ElForm>;
 const loginFormRef = ref<FormInstance>();
@@ -12,11 +13,15 @@ const loginForm = reactive<Login.ReqLoginForm>({ username: "", password: "" });
 
 const loading = ref(false);
 
+const router = useRouter();
+
 const resetForm = (formEl: FormInstance | undefined) => {
   console.log(formEl);
 };
 const login = (formEl: FormInstance | undefined) => {
   console.log(formEl);
+  // 4.跳转到首页
+  router.push("/");
 };
 </script>
 

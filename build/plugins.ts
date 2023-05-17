@@ -1,17 +1,6 @@
 import vue from "@vitejs/plugin-vue";
 import eslintPlugin from "vite-plugin-eslint";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-/*
-  // tsconfig.JSON.stringify
-  配置 defineOptions 
-  {
-    "compilerOptions":{
-      "types":["unplugin-vue-define-options/macros-global"]
-    }
-  }
-   "unplugin-vue-define-options/macros-global"
-*/
-import DefineOptions from "unplugin-vue-define-options/vite";
 import { vitesStartInfo, viteBuildInfo } from "./info";
 // 自动注册全局组件
 import Components from "unplugin-vue-components/vite";
@@ -37,7 +26,6 @@ export const getPluginsList = (
       ],
       dts: "types/global-components.d.ts"
     }),
-    DefineOptions(),
     // * EsLint 报错信息显示在浏览器界面上
     eslintPlugin(),
     // jsx、tsx语法支持

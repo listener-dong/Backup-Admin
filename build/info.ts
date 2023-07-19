@@ -4,6 +4,7 @@ import type { PluginOption, ViteDevServer } from "vite";
 import colors from "picocolors";
 import duration from "dayjs/plugin/duration";
 import { sum } from "lodash-unified";
+import { ITQM } from "./graph";
 dayjs.extend(duration);
 
 const staticPath = "dist/static";
@@ -69,20 +70,21 @@ export function vitesStartInfo(): PluginOption {
           );
           console.info(
             colors.green(
-              "                    _________________________________________________ \n" +
-                "            /|     |                                                 | \n" +
-                "            ||     |                                                 | \n" +
-                "       .----|-----,|                                                 | \n" +
-                "       ||  ||   ==||       " +
-                colors.bold(colors.red("Welcome ")) +
-                colors.bold(colors.blue("Backup-Admin...")) +
-                "                   | \n" +
-                "  .-----'--'|   ==||                                                 | \n" +
-                "  |)-      ~|     ||_________________________________________________| \n" +
-                "  | ___     |     |____...==..._  >________________________________| \n" +
-                ' [_/.-."--"-------- //.-.  .-.\\/   |/              \\ .-.  .-. // \n' +
-                '   ( o )`===""""""""`( o )( o )     o              `( o )( o )`  \n' +
-                "    '-'               '-'  '-'                       '-'  '-' \n"
+              ITQM
+              // "                    _________________________________________________ \n" +
+              //   "            /|     |                                                 | \n" +
+              //   "            ||     |                                                 | \n" +
+              //   "       .----|-----,|                                                 | \n" +
+              //   "       ||  ||   ==||       " +
+              //   colors.bold(colors.red("Welcome ")) +
+              //   colors.bold(colors.blue("Backup-Admin...")) +
+              //   "                   | \n" +
+              //   "  .-----'--'|   ==||                                                 | \n" +
+              //   "  |)-      ~|     ||_________________________________________________| \n" +
+              //   "  | ___     |     |____...==..._  >________________________________| \n" +
+              //   ' [_/.-."--"-------- //.-.  .-.\\/   |/              \\ .-.  .-. // \n' +
+              //   '   ( o )`===""""""""`( o )( o )     o              `( o )( o )`  \n' +
+              //   "    '-'               '-'  '-'                       '-'  '-' \n"
             )
           );
           print();

@@ -11,7 +11,6 @@ declare module "@vue/runtime-core" {
   export interface GlobalComponents {
     ElAside: typeof import("element-plus/es")["ElAside"];
     ElButton: typeof import("element-plus/es")["ElButton"];
-    ElCard: typeof import("element-plus/es")["ElCard"];
     ElContainer: typeof import("element-plus/es")["ElContainer"];
     ElFooter: typeof import("element-plus/es")["ElFooter"];
     ElForm: typeof import("element-plus/es")["ElForm"];
@@ -25,7 +24,6 @@ declare module "@vue/runtime-core" {
     ElScrollbar: typeof import("element-plus/es")["ElScrollbar"];
     ElSubMenu: typeof import("element-plus/es")["ElSubMenu"];
     HelloWorld: typeof import("./../src/components/HelloWorld.vue")["default"];
-    One: typeof import("./../src/components/One.vue")["default"];
     RouterLink: typeof import("vue-router")["RouterLink"];
     RouterView: typeof import("vue-router")["RouterView"];
   }

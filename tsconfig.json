@@ -23,7 +23,7 @@
       "@/*": ["src/*"],
       "@build/*": ["build/*"]
     },
-    "types": ["node", "vite/client", "element-plus/global"],
+    "types": ["node", "vite/client", "element-plus"],
     "typeRoots": ["./node_modules/@types/", "./types"]
   },
   "include": [
